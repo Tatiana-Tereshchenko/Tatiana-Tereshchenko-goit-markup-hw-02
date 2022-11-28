@@ -1,19 +1,21 @@
 :root {
   --primery-text-color: #434455;
   --title-text-color: #2E2F42;
+  --background-color-hero: #2E2F42;
   --accent-color: #4D5AE5;
   --background-color: #ffffff;
   --button-color: #ffffff;
   --footer-logo: #F4F4FD;
+  --background-color-cection: #F4F4FD;
+  --background-color-footer: #2E2F42;
+  --color-hover-nav: #434455;
 }
 
 body {
     color:var(--primery-text-color);
     background-color:var(--background-color);
     font-family: Roboto, sans-serif;
-    letter-spacing: 0.03em;
     font-size: 16px;
-    font-weight: 400;
 }
 /* heder */
 .logo-blu {
@@ -28,15 +30,15 @@ body {
     text-decoration: none;
     text-transform: uppercase;
 }
-.nav {
-    font-weight: 600;
-    line-height: 1,5;
-    list-style: none;
-    
+
+ul {
+    list-style: none; 
 }
-.heder-logo {
+.heder-link {
     color:var(--title-text-color);
+    font-weight: 700;
     text-decoration: none;
+    line-height: 1.5;
 }
 .contacts {
     line-height: 1.5;
@@ -46,7 +48,10 @@ body {
     color: var(--primery-text-color);
     text-decoration: none;
 }
-.heder-logo:focus {
+.heder-link:hover {
+    color: var(--color-hover-nav);
+}
+.heder-link:focus {
     color: var(--accent-color);
 }
 .heder-contacts:hover {
@@ -56,8 +61,25 @@ body {
     color: var(--accent-color);
 }
 /* HERO */
+.hero {
+background-color: var(--background-color-hero);
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px; 
+}
 .hero-title {
-font-weight: 600;
+color: #ffffff;
+font-weight: 700;
 font-size: 56px;
 line-height: 1.07;
 text-align: center;
@@ -66,11 +88,10 @@ text-align: center;
 color: var(--button-color);
 background-color:var(--accent-color); 
 font-family: Roboto, sans-serif;
-font-weight: 600;
+font-weight: 700;
 line-height: 1.19;
-display: flex;
-align-items: center;
-cursor: pointer
+cursor: pointer;
+font-size: 16px;
 }
 .hero-button:hover {
     background-color: var(--accent-color);
@@ -81,7 +102,7 @@ cursor: pointer
 /* SECTION */
 .section-tile {
 color: var(--title-text-color);
-font-weight: 600;
+font-weight: 700;
 font-size: 36px;
 line-height: 1.11;
 text-align: center;
@@ -89,17 +110,22 @@ letter-spacing: 0.02em;
 }
 .title {
 color: var(--title-text-color);
-font-weight: 600;
+font-weight: 700;
 font-size: 20px;
 line-height: 1.2;
 letter-spacing: 0.02em;
 }
 .section-text {
 line-height: 1.5;
-letter-spacing: 0.02em;
 }
 .decor {
-    list-style: none;
+list-style: none;
+}
+.team {
+    background-color: var(--background-color-cection);
+}
+.team-item {
+    background-color: var(--background-color)
 }
 /* FOOTER */
 .footer-logo {
@@ -120,7 +146,6 @@ line-height: 1.17;
 }
 .footer-text {
 line-height: 1.5;
-letter-spacing: 0.02em;
 color: #E7E9FC;
 }
 /*  PAGE2------------portfolio */
@@ -133,8 +158,16 @@ color: #E7E9FC;
     align-items: center;
     vertical-align: baseline;
     letter-spacing: 0.02em;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer
+}
+.filter-portfolio:hover {
+    background-color: var(--accent-color);
+    color: var(--button-color);
+}
+.filter-portfolio:focus {
+    background-color: var(--accent-color);
+    color: var(--button-color);
 }
 .portfolio-title {
     color: var(--title-text-color);
@@ -146,4 +179,6 @@ color: #E7E9FC;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
-
+.section-footer {
+    background-color: var(--background-color-footer);
+}
